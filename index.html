@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Хөдөлмөр эрхлэлтийн цахим сан</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="icon"
+      href="http://omnogovi.com/css/img/logo.png"
+      type="image/png"
+      sizes="100x89"
+    />
+    <link rel="stylesheet" href="bundle.min.css" />
+  </head>
+  <body>
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+          style="flex: 1 0 auto"
+        >
+          <button class="mdc-icon-button material-icons">menu</button>
+          <!-- <span class="mdc-top-app-bar__title"
+            >Хөдөлмөр эрхлэлтийн цахим сан</span
+          > -->
+        </section>
+        <section id="search-container">
+          <div class="search-div">
+            <form method="get" action="index.php?view=jobs" id="search-form">
+              <div class="search-button">
+                <button type="submit" class="mdc-icon-button material-icons">
+                  search
+                </button>
+                <div class="search-form-input">
+                  <input type="hidden" name="view" value="jobs" />
+                  <input
+                    type="search"
+                    placeholder="Ажлын байр хайх..."
+                    name="wordsearch"
+                    autocomplete="off"
+                    id="search-input"
+                  />
+                </div>
+                <button
+                  class="mdc-icon-button material-icons"
+                  id="clear-button"
+                  type="reset"
+                  style="display: none"
+                >
+                  clear
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+          style="min-width: 48px;"
+        >
+          <div title="Хайх">
+            <button class="mdc-icon-button material-icons" id="search-trigger">
+              search
+            </button>
+          </div>
+
+          <a href="/" title="Эхлэл">
+            <button class="mdc-icon-button material-icons active">
+              home
+            </button>
+          </a>
+
+          <a href="index.php?view=about" title="Бидний тухай">
+            <button class="mdc-icon-button material-icons">
+              info
+            </button>
+          </a>
+
+          <a href="/index.php?view=jobs" title="Ажлын байрууд">
+            <button class="mdc-icon-button material-icons">
+              work
+            </button>
+          </a>
+
+          <div class="mdc-menu-surface--anchor" title="Бүртгэл">
+            <button class="mdc-icon-button material-icons" id="account-button">
+              account_circle
+            </button>
+            <div class="mdc-menu-surface">
+              <ul class="account mdc-list">
+                <a href="index.php?view=login">
+                  <li class="mdc-list-item" tabindex="0">
+                    <span class="mdc-list-item__text">Нэвтрэх</span>
+                  </li></a
+                >
+                <a href="index.php?view=register">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Бүртгүүлэх</span>
+                  </li></a
+                >
+                <a href="index.php?view=juram">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Бүртгүүлэх журам</span>
+                  </li>
+                </a>
+                <li role="separator" class="mdc-list-divider"></li>
+                <a href="/company">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Ажил олгогч нэвтрэх</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <script src="bundle.min.js"></script>
+  </body>
+</html>
