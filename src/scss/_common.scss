@@ -1,13 +1,21 @@
 $mdc-theme-primary: #fff;
 $mdc-theme-secondary: #000;
+// shape
+// $mdc-shape-small-component-radius: 20px;
+// $mdc-shape-medium-component-radius: 16px;
+// $mdc-shape-large-component-radius: 20px;
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/menu-surface/mdc-menu-surface";
+@import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/button/mdc-button";
+@import "./font";
 body {
   font-family: "Roboto";
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
 }
 /* clears the 'X' from Internet Explorer */
 input[type="search"]::-ms-clear {
@@ -36,4 +44,10 @@ a button.mdc-icon-button {
   &.active {
     color: #3378d8;
   }
+}
+a {
+  color: #000;
+}
+#main {
+  margin-top: 64px;
 }

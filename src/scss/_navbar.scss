@@ -1,5 +1,5 @@
-@import "./font";
 header {
+  top: 0;
   box-shadow: 0px 4px 8px -3px rgba(17, 17, 17, 0.06);
   color: #606060 !important;
 }
@@ -115,4 +115,46 @@ header {
 }
 .account.mdc-list li.mdc-list-item {
   height: 36px;
+}
+
+// logo
+.brand-logo {
+  background: url(../../assets/logo.png) 100% 50% / auto 100% no-repeat;
+  display: block;
+  height: 32px;
+  margin-right: 16px;
+  width: 32px;
+}
+.brand-lockup {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  margin-right: auto;
+  padding-left: 24px;
+  @media (max-width: 1321px) {
+    padding-left: 0;
+  }
+}
+.old-logo-text {
+  font-weight: 300;
+  height: 48px;
+  @media (max-width: 1321px) {
+    display: none;
+  }
+}
+
+.old-logo-text h3,
+.old-logo-text h5 {
+  margin: 0;
+}
+.old-logo-text h3 {
+  margin-top: 5px;
+}
+// Drawer
+#drawer-button {
+  @media (min-width: 1321px) {
+    display: none !important;
+  }
 }

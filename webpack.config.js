@@ -1,6 +1,7 @@
 var path = require("path");
 
 module.exports = {
+  mode: "development",
   entry: "./src/js/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -31,6 +32,15 @@ module.exports = {
             options: {
               includePaths: ["node_modules"]
             }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {}
           }
         ]
       }

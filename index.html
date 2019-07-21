@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Хөдөлмөр эрхлэлтийн цахим сан</title>
     <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link
       rel="icon"
@@ -22,10 +22,16 @@
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
           style="flex: 1 0 auto"
         >
-          <button class="mdc-icon-button material-icons">menu</button>
-          <!-- <span class="mdc-top-app-bar__title"
-            >Хөдөлмөр эрхлэлтийн цахим сан</span
-          > -->
+          <button class="mdc-icon-button material-icons" id="drawer-button">
+            menu
+          </button>
+          <a href="/" class="brand-lockup"
+            ><i class="brand-logo"></i>
+            <div class="old-logo-text">
+              <h3>ӨМНӨГОВЬ АЙМАГ</h3>
+              <h5>Хөдөлмөр эрхлэлтийн цахим сан</h5>
+            </div>
+          </a>
         </section>
         <section id="search-container">
           <div class="search-div">
@@ -68,25 +74,27 @@
           </div>
 
           <a href="/" title="Эхлэл">
-            <button class="mdc-icon-button material-icons active">
+            <button class="mdc-icon-button material-icons-outlined active">
               home
             </button>
           </a>
-
           <a href="index.php?view=about" title="Бидний тухай">
-            <button class="mdc-icon-button material-icons">
+            <button class="mdc-icon-button material-icons-outlined">
               info
             </button>
           </a>
 
           <a href="/index.php?view=jobs" title="Ажлын байрууд">
-            <button class="mdc-icon-button material-icons">
+            <button class="mdc-icon-button material-icons-outlined">
               work
             </button>
           </a>
 
           <div class="mdc-menu-surface--anchor" title="Бүртгэл">
-            <button class="mdc-icon-button material-icons" id="account-button">
+            <button
+              class="mdc-icon-button material-icons-outlined"
+              id="account-button"
+            >
               account_circle
             </button>
             <div class="mdc-menu-surface">
@@ -96,29 +104,209 @@
                     <span class="mdc-list-item__text">Нэвтрэх</span>
                   </li></a
                 >
+
                 <a href="index.php?view=register">
                   <li class="mdc-list-item">
                     <span class="mdc-list-item__text">Бүртгүүлэх</span>
                   </li></a
                 >
+
                 <a href="index.php?view=juram">
                   <li class="mdc-list-item">
                     <span class="mdc-list-item__text">Бүртгүүлэх журам</span>
-                  </li>
-                </a>
+                  </li></a
+                >
+
                 <li role="separator" class="mdc-list-divider"></li>
                 <a href="/company">
                   <li class="mdc-list-item">
                     <span class="mdc-list-item__text">Ажил олгогч нэвтрэх</span>
-                  </li>
-                </a>
+                  </li></a
+                >
               </ul>
             </div>
           </div>
         </section>
       </div>
     </header>
+    <!-- Main section -->
+    <div id="main">
+      <aside class="mdc-drawer" id="temp-drawer">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list" id="drawer-list">
+            <h3 class="drawer-heading">Салбараар - хайх</h3>
+            <a
+              class="mdc-list-item drawer-link"
+              href="/index.php?view=jobs&s=1"
+              tabindex="0"
+              >Удирдах албан тушаал</a
+            >
+            <a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=2"
+              >Автомашины засвар үйлчилгээ</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=3"
+              >Ажилчид, туслах ажилтан</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=4"
+              >Аялал жуулчлал, зочид буудал</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=5"
+              >Барилга, Үл хөдлөх хөрөнгө</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=6"
+              >Боловсрол, Шинжлэх ухаан</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=7"
+              >Дохиолол, харуул хамгаалалт</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=8"
+              >Маркетинг, Борлуулалт</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=9"
+              >Мэдээлэл технологи, Харилцаа холбоо</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=10"
+              >Оффис, Захиргаа, Хүний нөөц</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=11"
+              >Ресторан, Хоол хүнсний үйлчилгээ</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=12"
+              >Банк, Санхүү, Даатгал</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=13"
+              >Соёл урлаг</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=14"
+              >Тээвэр, гааль, агуулах</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=15"
+              >Уул уурхай</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=16"
+              >Үйлдвэрлэл, Дэд бүтэц</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=17"
+              >Үйлчилгээ</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=18"
+              >ХАА, Байгаль экологи</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=19"
+              >Хууль, хуулийн үйлчилгээ</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=20"
+              >Хэвлэл мэдээлэл, Медиа, Дизайн</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=21"
+              >Эмнэлэг, Эрүүл мэнд</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;s=22"
+              >Ажлын туршлага шаардахгүй ажлын байр</a
+            >
+            <h3 class="drawer-heading">Мэргэжилтний түвшин - хайх</h3>
+            <a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=1"
+              >Удирдах</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=2"
+              ><li>Дунд шатны удирдах</li></a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=3"
+              >Менежер</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=4"
+              >Гүйцэтгэх</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=5"
+              >Туслах</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;t=6"
+              >Түр орон тоо</a
+            >
+            <h3 class="drawer-heading">Цалингийн түвшин - хайх</h3>
+            <a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=1"
+              >Тохирцоно</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=2"
+              >340,000₮ - 500,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=3"
+              >500,000₮ - 600,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=4"
+              >600,000₮ - 800,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=5"
+              >800,000₮ - 1,000,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=6"
+              >1,000,000₮ - 1,200,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=7"
+              >1,200,000₮ - 1,500,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=8"
+              >1,500,000₮ - 2,000,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=9"
+              >2,500,000₮ - 3,000,000₮</a
+            ><a
+              class="mdc-list-item drawer-link"
+              href="index.php?view=jobs&amp;d=10"
+              >3,000,000₮ - дээш</a
+            >
+            <h3 class="drawer-heading">Бусад</h3>
 
-    <script src="dist/bundle.min.js"></script>
+            <a class="mdc-list-item drawer-link" href="index.php?view=news"
+              >Мэдээ мэдээлэл</a
+            >
+            <a class="mdc-list-item drawer-link" href="index.php?view=zovlomj"
+              >Зөвлөмжүүд</a
+            >
+          </nav>
+        </div>
+      </aside>
+      <div class="mdc-drawer-scrim"></div>
+    </div>
+    <script src="bundle.min.js"></script>
   </body>
 </html>
