@@ -1,4 +1,5 @@
 import { MDCRipple } from "@material/ripple";
+import "../scss/index.scss";
 import "./navbar";
 console.log("🎄");
 var iconButton = document.querySelectorAll(".mdc-icon-button");

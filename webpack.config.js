@@ -1,54 +1,39 @@
-function getStyleUse(bundleFilename) {
-  return [
-    {
-      loader: "file-loader",
-      options: {
-        name: bundleFilename
-      }
-    },
-    { loader: "extract-loader" },
-    { loader: "css-loader" },
-    {
-      loader: "sass-loader",
-      options: {
-        includePaths: ["./node_modules"],
-        implementation: require("dart-sass"),
-        fiber: require("fibers")
-      }
-    }
-  ];
-}
+var path = require("path");
 
-module.exports = [
-  {
-    entry: "./src/scss/index.scss",
-    output: {
-      // This is necessary for webpack to compile, but we never reference this js file.
-      filename: "bundle.min.js"
-    },
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          use: getStyleUse("bundle.min.css")
-        }
-      ]
-    }
+module.exports = {
+  entry: "./src/js/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.min.js"
   },
-
-  {
-    entry: "./src/js/index.js",
-    output: {
-      filename: "bundle.min.js"
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.js$/,
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
           loader: "babel-loader",
-          query: { presets: ["env"] }
+          options: {
+            presets: ["@babel/preset-env"]
+          }
         }
-      ]
-    }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              includePaths: ["node_modules"]
+            }
+          }
+        ]
+      }
+    ]
   }
-];
+};
