@@ -10,7 +10,13 @@ $mdc-theme-secondary: #000;
 @import "@material/list/mdc-list";
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/button/mdc-button";
+@import "@material/ripple/mdc-ripple";
+@import "@material/typography/mdc-typography";
 @import "./font";
+* {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto";
   margin: 0;
@@ -47,7 +53,56 @@ a button.mdc-icon-button {
 }
 a {
   color: #000;
+  text-decoration: none;
 }
 #main {
   margin-top: 64px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 610px;
+  overflow: hidden;
+  padding: 0 16px;
+  width: 100%;
+  @media screen and (min-width: 921px) {
+    max-width: 840px;
+    padding: 0 40px;
+  }
+}
+.container--jumbo {
+  max-width: 1240px;
+}
+.section {
+  padding-bottom: 48px;
+  padding-top: 60px;
+  position: relative;
+}
+@media screen and (min-width: 1321px) {
+  .has-drawer.container {
+    max-width: 1140px;
+    padding-left: 340px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #202124;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+li {
+  list-style: none;
+}
+.mt-20 {
+  padding-top: 20px;
+}
+.d-flex {
+  display: flex;
+}
+.flex-grow {
+  flex-grow: 1;
 }

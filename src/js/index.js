@@ -2,6 +2,7 @@ import { MDCRipple } from "@material/ripple";
 import "../scss/index.scss";
 import "./navbar";
 import "./drawer";
+import "./card";
 console.log("🎄");
 var iconButton = document.querySelectorAll(".mdc-icon-button");
 iconButton.forEach(iconButton => {
