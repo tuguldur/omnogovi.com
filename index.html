@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Хөдөлмөр эрхлэлтийн цахим сан</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="http://omnogovi.com/css/img/logo.png"
+      type="image/png"
+      sizes="100x89"
+    />
+  </head>
+  <body>
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+          style="flex: 1 0 auto"
+        >
+          <button class="mdc-icon-button material-icons" id="drawer-button">
+            menu
+          </button>
+          <a href="/" class="brand-lockup"
+            ><i class="brand-logo"></i>
+            <div class="old-logo-text">
+              <h3>ӨМНӨГОВЬ АЙМАГ</h3>
+              <h5>Хөдөлмөр эрхлэлтийн цахим сан</h5>
+            </div>
+          </a>
+        </section>
+        <section id="search-container">
+          <div class="search-div">
+            <form method="get" action="index.php?view=jobs" id="search-form">
+              <div class="search-button">
+                <button type="submit" class="mdc-icon-button material-icons">
+                  search
+                </button>
+                <div class="search-form-input">
+                  <input type="hidden" name="view" value="jobs" />
+                  <input
+                    type="search"
+                    placeholder="Ажлын байр хайх..."
+                    name="wordsearch"
+                    autocomplete="off"
+                    id="search-input"
+                  />
+                </div>
+                <button
+                  class="mdc-icon-button material-icons"
+                  id="clear-button"
+                  type="reset"
+                  style="display: none"
+                >
+                  clear
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+          style="min-width: 48px;"
+        >
+          <div title="Хайх">
+            <button class="mdc-icon-button material-icons" id="search-trigger">
+              search
+            </button>
+          </div>
+
+          <a href="/" title="Эхлэл">
+            <button class="mdc-icon-button material-icons-outlined active">
+              home
+            </button>
+          </a>
+          <a href="index.php?view=about" title="Бидний тухай">
+            <button class="mdc-icon-button material-icons-outlined">
+              info
+            </button>
+          </a>
+
+          <a href="/index.php?view=jobs" title="Ажлын байрууд">
+            <button class="mdc-icon-button material-icons-outlined">
+              work
+            </button>
+          </a>
+
+          <div class="mdc-menu-surface--anchor" title="Бүртгэл">
+            <button
+              class="mdc-icon-button material-icons-outlined"
+              id="account-button"
+            >
+              account_circle
+            </button>
+            <div class="mdc-menu-surface">
+              <ul class="account mdc-list">
+                <a href="index.php?view=login">
+                  <li class="mdc-list-item" tabindex="0">
+                    <span class="mdc-list-item__text">Нэвтрэх</span>
+                  </li></a
+                >
+
+                <a href="index.php?view=register">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Бүртгүүлэх</span>
+                  </li></a
+                >
+
+                <a href="index.php?view=juram">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Бүртгүүлэх журам</span>
+                  </li></a
+                >
+
+                <li role="separator" class="mdc-list-divider"></li>
+                <a href="/company">
+                  <li class="mdc-list-item">
+                    <span class="mdc-list-item__text">Ажил олгогч нэвтрэх</span>
+                  </li></a
+                >
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- Main section -->
+    <div id="main">
+      <aside class="mdc-drawer" id="temp-drawer">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list" id="drawer-list">
+            <span class="side-nav__section-title">Салбараар - хайх</span>
+            <ul class="side-nav__menu">
+              <a
+                class="mdc-list-item drawer-link"
+                href="/index.php?view=jobs&s=1"
+                tabindex="0"
+                >Удирдах албан тушаал</a
+              >
+              <a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=2"
+                >Автомашины засвар үйлчилгээ</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=3"
+                >Ажилчид, туслах ажилтан</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=4"
+                >Аялал жуулчлал, зочид буудал</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=5"
+                >Барилга, Үл хөдлөх хөрөнгө</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=6"
+                >Боловсрол, Шинжлэх ухаан</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=7"
+                >Дохиолол, харуул хамгаалалт</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=8"
+                >Маркетинг, Борлуулалт</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=9"
+                >Мэдээлэл технологи, Харилцаа холбоо</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=10"
+                >Оффис, Захиргаа, Хүний нөөц</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=11"
+                >Ресторан, Хоол хүнсний үйлчилгээ</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=12"
+                >Банк, Санхүү, Даатгал</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=13"
+                >Соёл урлаг</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=14"
+                >Тээвэр, гааль, агуулах</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=15"
+                >Уул уурхай</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=16"
+                >Үйлдвэрлэл, Дэд бүтэц</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=17"
+                >Үйлчилгээ</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=18"
+                >ХАА, Байгаль экологи</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=19"
+                >Хууль, хуулийн үйлчилгээ</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=20"
+                >Хэвлэл мэдээлэл, Медиа, Дизайн</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=21"
+                >Эмнэлэг, Эрүүл мэнд</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;s=22"
+                >Ажлын туршлага шаардахгүй ажлын байр</a
+              >
+            </ul>
+            <span class="side-nav__section-title"
+              >Мэргэжилтний түвшин - хайх</span
+            >
+            <ul class="side-nav__menu">
+              <a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=1"
+                >Удирдах</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=2"
+                ><li>Дунд шатны удирдах</li></a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=3"
+                >Менежер</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=4"
+                >Гүйцэтгэх</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=5"
+                >Туслах</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;t=6"
+                >Түр орон тоо</a
+              >
+            </ul>
+            <span class="side-nav__section-title">Цалингийн түвшин - хайх</span>
+            <ul class="side-nav__menu">
+              <a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=1"
+                >Тохирцоно</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=2"
+                >340,000₮ - 500,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=3"
+                >500,000₮ - 600,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=4"
+                >600,000₮ - 800,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=5"
+                >800,000₮ - 1,000,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=6"
+                >1,000,000₮ - 1,200,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=7"
+                >1,200,000₮ - 1,500,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=8"
+                >1,500,000₮ - 2,000,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=9"
+                >2,500,000₮ - 3,000,000₮</a
+              ><a
+                class="mdc-list-item drawer-link"
+                href="index.php?view=jobs&amp;d=10"
+                >3,000,000₮ - дээш</a
+              >
+            </ul>
+            <span class="side-nav__section-title">Бусад</span>
+            <ul class="side-nav__menu">
+              <a class="mdc-list-item drawer-link" href="index.php?view=news"
+                >Мэдээ мэдээлэл</a
+              >
+              <a class="mdc-list-item drawer-link" href="index.php?view=zovlomj"
+                >Зөвлөмжүүд</a
+              >
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <div class="mdc-drawer-scrim"></div>
+    </div>
+
+    <section class="section">
+      <div class="has-drawer container">
+        <h2>ТОП ажил олгогч</h2>
+        <li role="separator" class="mdc-list-divider"></li>
+        <div class="mt-20 card-container">
+          <div class="object-card article__copy">
+            <a
+              class="object-card__link"
+              href=""
+              #
+              rel="noopener"
+              target="_blank"
+            >
+              <div
+                class="object-card__image"
+                style="background-image: url('http://omnogovi.com/images/5cc5335c2ea34.jpg');"
+              ></div>
+              <div class="object-card__copy">
+                <h2 class="object-card__title">Энержи Интернэшнл</h2>
+                <p class="object-card__body">
+                  Байгууллагын тухай
+                </p>
+              </div>
+              <p class="object-card__label">
+                Ажлын байр (4)
+                <i
+                  class="object-card__icon object-card__icon--open material-icons"
+                  >arrow_downward</i
+                >
+              </p>
+            </a>
+          </div>
+          <div class="object-card article__copy">
+            <a
+              class="object-card__link"
+              href=""
+              #
+              rel="noopener"
+              target="_blank"
+            >
+              <div
+                class="object-card__image"
+                style="background-image: url('http://omnogovi.com/images/thumb/5cc5330f8200d.jpg');"
+              ></div>
+              <div class="object-card__copy">
+                <h2 class="object-card__title">Моннис Интернэшнл</h2>
+                <p class="object-card__body">
+                  Байгууллагын тухай
+                </p>
+              </div>
+              <p class="object-card__label">
+                Ажлын байр (1)
+                <i
+                  class="object-card__icon object-card__icon--open material-icons"
+                  >arrow_downward</i
+                >
+              </p>
+            </a>
+          </div>
+          <div class="object-card article__copy">
+            <a
+              class="object-card__link"
+              href=""
+              #
+              rel="noopener"
+              target="_blank"
+            >
+              <div
+                class="object-card__image"
+                style="background-image: url('http://omnogovi.com/images/thumb/5cc532d4c9a86.jpg');"
+              ></div>
+              <div class="object-card__copy">
+                <h2 class="object-card__title">Ихговийн төгөл</h2>
+                <p class="object-card__body">
+                  Байгууллагын тухай
+                </p>
+              </div>
+              <p class="object-card__label">
+                Ажлын байр (3)
+                <i
+                  class="object-card__icon object-card__icon--open material-icons"
+                  >arrow_downward</i
+                >
+              </p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2 class="mt-20">Байгууллагуудын онцлох мэдээлэл</h2>
+          <li role="separator" class="mdc-list-divider"></li>
+            <div class="mt-20 card-container">
+            <div class="mdc-card news-card">
+              <a href="#">
+                <div
+                  class="mdc-card__primary-action news-card__primary-action"
+                  tabindex="0"
+                >
+                  <div
+                    class="mdc-card__media mdc-card__media--16-9 news-card__media"
+                    style='background-image: url("http://omnogovi.com/images/thumb/5be528aed743b.jpg");'
+                  ></div>
+                  <div class="news-card__primary">
+                    <h2
+                      class="news-card__title mdc-typography mdc-typography--subtitle2"
+                    >
+                      PRIUS машины тухай түгээмэл эндүүрэл
+                    </h2>
+                    <h3
+                      class="news-card__subtitle mdc-typography mdc-typography--subtitle2"
+                    >
+                      by: Моннис Интернэшнл
+                    </h3>
+                  </div>
+                  <div
+                    class="news-card__secondary mdc-typography mdc-typography--body2"
+                  >
+                  2008 оны PRIUS 20-оос 2005 оны PRIUS 20 нь илүү сайн. Японы техник технологи нь 100% автоматжуулсан системтэй байдаг ба манай монголчууд шиг гараар
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="mdc-card news-card">
+                <a href="#">
+                  <div
+                    class="mdc-card__primary-action news-card__primary-action"
+                    tabindex="0"
+                  >
+                    <div
+                      class="mdc-card__media mdc-card__media--16-9 news-card__media"
+                      style='background-image: url("http://omnogovi.com/images/thumb/5be43a3cbf9f5.jpg");'
+                    ></div>
+                    <div class="news-card__primary">
+                      <h2
+                        class="news-card__title mdc-typography mdc-typography--subtitle2"
+                      >
+                      HYBRID МАШИНЫ ТУХАЙ
+                      </h2>
+                      <h3
+                        class="news-card__subtitle mdc-typography mdc-typography--subtitle2"
+                      >
+                        by: Энержи Интернэшнл
+                      </h3>
+                    </div>
+                    <div
+                      class="news-card__secondary mdc-typography mdc-typography--body2"
+                    >
+                    За Хайбрид машины талаар бага ч гэсэн ойлголтыг өгөхөөр зорилоо.Хайбрид машин гэдэг бол ерөнхийдөө хоёр болон түүнээс дээш тооны
+                    </div>
+                  </div>
+                </a>
+            </div>
+            <div class="mdc-card news-card">
+                  <a href="#">
+                    <div
+                      class="mdc-card__primary-action news-card__primary-action"
+                      tabindex="0"
+                    >
+                      <div
+                        class="mdc-card__media mdc-card__media--16-9 news-card__media"
+                        style='background-image: url("http://omnogovi.com/images/thumb/5be439451f41e.jpg");'
+                      ></div>
+                      <div class="news-card__primary">
+                        <h2
+                          class="news-card__title mdc-typography mdc-typography--subtitle2"
+                        >
+                        Toyota-н эмблемд агуулагдсан нууц
+                        </h2>
+                        <h3
+                          class="news-card__subtitle mdc-typography mdc-typography--subtitle2"
+                        >
+                          by: Цасода саут гоби ХХК
+                        </h3>
+                      </div>
+                      <div
+                        class="news-card__secondary mdc-typography mdc-typography--body2"
+                      >
+                      Энэхүү гайхалтай, дэлхийн хүн бүр шахуу мэдэх алдартай эмблемийг 1989 оны 10-р сард болсон 50 жилийн ойн арга хэмжээний үеэр Toyota анх нийтэд
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </div>
+        </div>
+        <div>
+            <h2 class="mt-20">Шинээр нэмэгдсэн ажлын байрууд (54)</h2>
+            <li role="separator" class="mdc-list-divider"></li>
+            <div>
+              <div class="job-card">
+                    <a class="object-card__link" href="" #="" rel="noopener" target="_blank">
+                        <div class="object-card__image" style="background-image: url('http://omnogovi.com/images/5cc5335c2ea34.jpg');"></div>
+                        <div class="object-card__copy">
+                          <h2 class="object-card__title">Энержи Интернэшнл</h2>
+                          <div class="d-flex">
+                              <p class="object-card__body">
+                                  Нягтлан бодогч
+                              </p>
+                              <div class="flex-grow"></div>
+                              <p class="object-card__body">
+                                  2019-05-14 - г хүртэл
+                              </p>
+                          </div>
+                        </div>
+                        <p class="object-card__label">
+                            215 өдрийн өмнө
+                          <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+                        </p>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <script src="bundle.min.js"></script>
+  </body>
+</html>
